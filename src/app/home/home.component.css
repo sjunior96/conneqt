@@ -1,0 +1,43 @@
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container-fluid >.row{
+    position: relative;
+}
+
+img{
+    width: 100%;
+}
+
+.image-wrapper{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.image-wrapper p{
+    font-weight: 500;
+}
+
+.image-wrapper p, h3{
+    color: black;
+}
+
+.image-wrapper .btn{
+    margin-top: 2rem;
+}
+
+.image-wrapper>p>span{
+    color: var(--conneqt-primary-color);
+}
+
+.container-fluid>.row>.col-md-6{
+    padding: 4rem 0px;
+}
