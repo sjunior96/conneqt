@@ -8,6 +8,9 @@ import { BodyComponent } from './body/body.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ThanksForSigningUpComponent } from './thanks-for-signing-up/thanks-for-signing-up.component';
 import { HomeComponent } from './home/home.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import { FooterComponent } from './footer/footer.component';
+import { ListItemMobileComponent } from './list-item-mobile/list-item-mobile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HomeComponent } from './home/home.component';
     BodyComponent,
     SignUpComponent,
     ThanksForSigningUpComponent,
-    HomeComponent
+    HomeComponent,
+    ListItemComponent,
+    FooterComponent,
+    ListItemMobileComponent
   ],
   imports: [
     BrowserModule,
