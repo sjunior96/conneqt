@@ -12,7 +12,3 @@
 .list-item-mobile.container-fluid .link-primary svg {
     fill: var(--conneqt-primary-color);
 }
-
-/* [class*="col-"] {
-    border: 1px solid red;
-} */
