@@ -1,0 +1,18 @@
+.container-fluid {
+    background-color: #f2f1ee;
+}
+
+input {
+    background-color: var(--conneqt-light-background-color);
+}
+
+.form-control.form-control-lg.p-3 {
+    font-size   : 16px;
+    border-color: rgb(155, 154, 153);
+}
+
+.form-text {
+    color      : black;
+    font-size  : 16px;
+    font-weight: 500;
+}
