@@ -1,39 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
-html{
+html {
     font-size: 16px;
 }
 
-.light-theme{
-    --conneqt-primary-color: #FD4D46;
+
+body {
+    color: var(--conneqt-body-text-color);
+}
+
+body * {
+    font-family: sans-serif;
+}
+
+:root {
+    --conneqt-body-text-color: #000;
+
+    --conneqt-primary-color     : #FD4D46;
     --conneqt-primary-box-shadow: rgba(253, 77, 70, .5);
 
     --conneqt-light-border-color: #E1E1E1;
+
+    --conneqt-light-background-color: #f2f1ee;
 }
 
-.btn{
-    padding: .350rem .75rem;
-    border-radius: 5rem;
+.btn {
+    padding       : .350rem 1rem;
+    border-radius : 5rem;
     vertical-align: text-top;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
     background-color: var(--conneqt-primary-color);
-    border-color: var(--conneqt-primary-color);
+    border-color    : var(--conneqt-primary-color);
 }
 
-.btn-check:focus+.btn-primary, .btn-primary:focus{
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
     box-shadow: 0 0 0 0.25rem var(--conneqt-primary-box-shadow);
 }
 
-.btn.btn-light{
-    border: 1px solid var(--conneqt-light-border-color);
-    color: var(--conneqt-primary-color);
+.btn.btn-light {
+    border     : 1px solid var(--conneqt-light-border-color);
+    color      : var(--conneqt-primary-color);
     font-weight: 600;
-}
-
-.navbar-text:nth-child(2)>button:not(:first-child){
-    margin-left: 2.5rem;
-}
-.navbar-text:nth-child(2)>button:last-child{
-    margin-right: 2.5rem;
 }
