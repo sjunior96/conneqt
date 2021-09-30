@@ -1,0 +1,24 @@
+.list-item.container-fluid {
+    border : 1px solid gray;
+    padding: 1rem 2rem;
+    margin : 2px;
+}
+
+.list-item.container-fluid .link-primary {
+    color          : var(--conneqt-primary-color);
+    text-decoration: none;
+    vertical-align : text-top;
+}
+
+.list-item.container-fluid .link-primary+.link-primary {
+    margin-left: 1rem;
+}
+
+.list-item.container-fluid svg {
+    width : 1.5rem;
+    height: 1.5rem;
+}
+
+.list-item.container-fluid .link-primary svg {
+    fill: var(--conneqt-primary-color);
+}
