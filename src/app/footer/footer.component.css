@@ -1,0 +1,14 @@
+.footer {
+    color           : #FFF;
+    background-color: var(--conneqt-primary-color);
+}
+
+.footer p {
+    font-weight: normal;
+}
+
+.footer a {
+    text-decoration: none;
+    color          : #FFF;
+    font-weight    : normal;
+}
