@@ -1,0 +1,18 @@
+.list-item-mobile.container-fluid svg {
+    width : 2.5rem;
+    height: 2.5rem;
+}
+
+.list-item-mobile.container-fluid .link-primary {
+    color          : var(--conneqt-primary-color);
+    text-decoration: none;
+    vertical-align : text-top;
+}
+
+.list-item-mobile.container-fluid .link-primary svg {
+    fill: var(--conneqt-primary-color);
+}
+
+/* [class*="col-"] {
+    border: 1px solid red;
+} */
