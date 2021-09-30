@@ -8,3 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'conneqt-challenge';
 }
+
+export interface ItemProps {
+  name?: string;
+  site?: string;
+  phone?: string;
+}
+
