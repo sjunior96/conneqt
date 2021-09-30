@@ -1,21 +1,74 @@
-<div class="container-fluid">
+<div class="home container-fluid">
     <div class="row">
-        <div class="col">
-            <img src="../../assets/images/image1.png" alt="" class="d-inline-block align-text-top">
-            <div class="image-wrapper">
-                <h3>Making distances a meaningless thing.</h3>
-                <p class="display-1">we are <span>conneqt</span></p>
-                <button type="button" class="btn btn-primary">Sign Up for a Free Trial</button>
+        <div
+            class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column ps-md-5 pt-4 pb-4 align-items-center align-items-md-start justify-content-md-center">
+            <p class="fs-5 d-md-none d-block text-center">Making distances a meaningless thing.</p>
+            <p class="fs-2 d-md-block d-none text-center">Making distances a meaningless thing.</p>
+            <p class="display-1 text-center">we are <span>conneqt</span></p>
+            <div class="col-7 d-flex flex-column">
+                <button routerLink="/sign-up" type="button" class="btn btn-primary mb-4 mt-4 align-self-md-start">Sign
+                    Up
+                    for a Free
+                    Trial</button>
+                <button type="button" class="btn btn-light mb-5 d-md-none d-block">Login</button>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 order-1 order-md-2 ps-0 pe-0">
+            <img class="w-100" src="../../assets/images/image1.png">
+        </div>
+    </div>
+
+    <div class="row mt-md-5">
+        <div class="col-md-6 d-md-block d-none">
+            <img class="img-fluid" src="../../assets/images/image2.png">
+        </div>
+
+        <div
+            class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column pb-5 pt-4 ps-md-5 align-items-center align-items-md-start">
+            <p class="fs-1 text-end ps-md-4">Your team always connected</p>
+            <div class="container-fluid">
+                <div *ngFor="let topic of topics" class="row ps-2 pt-4">
+                    <div class="col-1 p-0 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="col-11 p-0 m-0">
+                        <p class="fs-5 ms-3">{{topic}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-6">
-            <img src="../../assets//images//image2.png" />
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column pb-5 align-items-center pt-4">
+            <p class="fs-1 text-center">Get a Free Trial</p>
+            <p class="fs-5 text-center mt-2 mb-0">See how Conneqt can solve your communication needs.</p>
+            <p class="fs-5 text-center mb-2">Start a trial now.</p>
+            <button routerLink="sign-up" type="button" class="btn btn-primary mb-4 mt-4">Sign Up for a Free
+                Trial</button>
         </div>
-        <div class="col-md-6">
-            <p>Teste</p>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-6 order-2 order-md-1 d-flex flex-column pb-5 align-items-center pt-4">
+            <p class="fs-1 text-center">Or purchase a license</p>
+            <p class="fs-3 text-center d-none d-md-block">Contact your local reseller to request a license trial or
+                purchase Conneqt</p>
+
+            <p class="text-center fs-2 m-4">Global Reseller</p>
+            <app-list-item class="d-none d-md-block" [item]="globalReseller"></app-list-item>
+            <app-list-item-mobile class="d-md-none" [item]="globalReseller"></app-list-item-mobile>
+
+            <p class="text-center fs-2 m-4">Brazil</p>
+            <app-list-item class="d-none d-md-block" *ngFor="let reseller of brazilResellers" [item]="reseller">
+            </app-list-item>
+            <app-list-item-mobile class="d-md-none" *ngFor="let reseller of brazilResellers" [item]="reseller">
+            </app-list-item-mobile>
         </div>
+
     </div>
 </div>
