@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListItemMobileComponent } from './list-item-mobile/list-item-mobile.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ListItemMobileComponent } from './list-item-mobile/list-item-mobile.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
