@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListItemMobileComponent } from './list-item-mobile/list-item-mobile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ListItemComponent,
     FooterComponent,
-    ListItemMobileComponent
+    ListItemMobileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
