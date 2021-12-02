@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { ItemProps } from '../app.component';
+import { IUserState } from '../store/reducers/user.reducer';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,12 @@ import { ItemProps } from '../app.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  user$: Observable<IUserState>;
+
+  constructor(private store: Store<{ userState: IUserState; }>) {
+    this.user$ = store.select("userState");
+  }
 
   topics: string[] = [
     "One on one and group meetings",

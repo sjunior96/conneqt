@@ -5,8 +5,12 @@
     </a>
 
     <span class="navbar-text me-4 d-none d-md-block">
-      <button routerLink="/sign-up" type="button" class="btn btn-primary me-5">Sign Up for a Free Trial</button>
-      <button routerLink="/login" type="button" class="btn btn-light">Login</button>
+      <button *ngIf="(user$ | async)?.user?.fullName === ''" routerLink="/sign-up" type="button"
+        class="btn btn-primary me-5">Sign Up for a Free Trial</button>
+      <button *ngIf="(user$ | async)?.user?.fullName !== ''" (click)="logout()" type="button"
+        class="btn btn-light">Logout</button>
+      <button *ngIf="(user$ | async)?.user?.fullName === ''" routerLink="/login" type="button"
+        class="btn btn-light">Login</button>
     </span>
   </div>
 </nav>

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { AuthRequest } from '../auth/shared/auth-request';
+import { UPDATE_USER } from '../store/actions/user.actions';
+import { IUserState } from '../store/reducers/user.reducer';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -11,7 +14,11 @@ import { UsersService } from '../users.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UsersService, private router: Router) { }
+  constructor(
+    private userService: UsersService,
+    private router: Router,
+    private store: Store<IUserState>
+  ) { }
 
   loginForm: FormGroup = new FormGroup({});
 
@@ -28,7 +35,11 @@ export class LoginComponent implements OnInit {
 
   loginUser(): void {
     this.userService.loginUser(this.loginForm.value).subscribe(user => {
-      console.log(user);
+      let state: IUserState = {
+        user: user
+      };
+      localStorage.setItem("userState", JSON.stringify(state));
+      this.store.dispatch(UPDATE_USER(state));
       this.router.navigate(["/"]);
     });
   }
