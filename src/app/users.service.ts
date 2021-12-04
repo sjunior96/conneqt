@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthRequest } from './auth/shared/auth-request';
 import { User } from './users/shared/user';
 
-const urlBase = "http://localhost:5050/api";
+const urlBase = "https://conneqt-api.herokuapp.com/api";
 
 @Injectable({
   providedIn: 'root'
